@@ -42,3 +42,9 @@ console.log(`the Extracted name is: ${name}`);
 
 let [c1, c2, c3, c4, c5] = student.courses;
 console.log(`the Extracted courses are: ${c1}, ${c2}, ${c3}, ${c4}, ${c5}`);
+
+// 3.2 Use destructuring to extract the name and courses properties from the student object:
+let scores = [85, 92, 78, 90];
+console.log("Logging the first two scores:")
+console.log(scores[0]);
+console.log(scores[1]);
