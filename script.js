@@ -48,3 +48,18 @@ let scores = [85, 92, 78, 90];
 console.log("Logging the first two scores:")
 console.log(scores[0]);
 console.log(scores[1]);
+
+// Part 4: The Spread Operator: //
+// 4.1 Clone the student object using the spread operator:
+console.log("Copied Object:")
+let copiedObj = {...student};
+console.log(copiedObj);
+// 4.2 Add a new property (e.g., graduationYear) to the cloned object and log it:
+console.log("Modified Copied Object:")
+let copiedObg = {...student, gradYear: 2026};
+console.log(copiedObg);
+
+// 4.3 Merge two arrays:
+let newCourses = ["CPAN144", "CPAN121", "CPAN112", "CPAN131"];
+student.courses = [...student.courses, ...newCourses];
+console.log(`New courses: ${student.courses}`);
