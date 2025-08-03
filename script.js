@@ -7,6 +7,12 @@ let student = {
     courses: ["CPAN116", "CPAN111", "CPAN113", "CPAN133", "CPAN134"],
     studentInfo: function() {
       console.log(`Student name: ${this.name}, Age: ${this.age}, Is the student enrolled: ${this.enrolled}, Courses Enrolled in: ${this.courses} `);
+    },
+    addCourse: function(courseName) {
+      this.courses.push(courseName);
+    },
+    getTotalCourses: function() {
+      return this.courses.length;
     }
 };
 
@@ -63,3 +69,11 @@ console.log(copiedObg);
 let newCourses = ["CPAN144", "CPAN121", "CPAN112", "CPAN131"];
 student.courses = [...student.courses, ...newCourses];
 console.log(`New courses: ${student.courses}`);
+
+// Part 5: Object Methods: //
+// 4.1 Add a method to the student object to dynamically add a new course to the courses array:
+console.log("Adding a new course (GNED101)")
+student.addCourse("GNED101");
+//4.2: Add another method to calculate and return the total number of courses:
+console.log("Getting the method to get total student courses");
+console.log(student.getTotalCourses());
