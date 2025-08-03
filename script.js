@@ -33,3 +33,12 @@ let jsonObj = JSON.parse(jsonString);
 //2.4 Log the newly created object and compare it to the original: //
 console.log("Outputting the JSON object")
 console.log(jsonObj)
+
+// Part 3: Using Destructuring Assignment: //
+// 3.1 Use destructuring to extract the name and courses properties from the student object:
+console.log("Extracting and outputting the name and course properties");
+let {name} = student;
+console.log(`the Extracted name is: ${name}`);
+
+let [c1, c2, c3, c4, c5] = student.courses;
+console.log(`the Extracted courses are: ${c1}, ${c2}, ${c3}, ${c4}, ${c5}`);
