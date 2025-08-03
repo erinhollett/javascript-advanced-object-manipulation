@@ -11,8 +11,25 @@ let student = {
 };
 
 // 1.2 Use console.log to output: //
-// The name and properties:
+// The name and age properties:
+console.log("Outputting the name and age:");
+
 console.log(student.name);
 console.log(student.age);
 // The result of calling the method:
+console.log("Outputting the studentInfo method:");
 student.studentInfo();
+
+// Part 2: Working with JSON //
+
+//2.1 Convert the student object into a JSON string: //
+let jsonString = JSON.stringify(student);
+//2.2 Log the JSON string to the console: //
+console.log("Outputting the JSON string")
+console.log(jsonString);
+
+//2.3 Convert the JSON string back into a JavaScript object: //
+let jsonObj = JSON.parse(jsonString);
+//2.4 Log the newly created object and compare it to the original: //
+console.log("Outputting the JSON object")
+console.log(jsonObj)
