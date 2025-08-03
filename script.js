@@ -31,8 +31,10 @@ student.studentInfo();
 //2.1 Convert the student object into a JSON string: //
 let jsonString = JSON.stringify(student);
 //2.2 Log the JSON string to the console: //
-console.log("Outputting the JSON string")
+console.log("Outputting the JSON string");
 console.log(jsonString);
+console.log('Outputting original object');
+console.log(student);
 
 //2.3 Convert the JSON string back into a JavaScript object: //
 let jsonObj = JSON.parse(jsonString);
@@ -51,9 +53,10 @@ console.log(`the Extracted courses are: ${c1}, ${c2}, ${c3}, ${c4}, ${c5}`);
 
 // 3.2 Use destructuring to extract the name and courses properties from the student object:
 let scores = [85, 92, 78, 90];
-console.log("Logging the first two scores:")
-console.log(scores[0]);
-console.log(scores[1]);
+console.log("Logging the first two scores:");
+const [score1, score2] = scores;
+console.log(score1);
+console.log(score2);
 
 // Part 4: The Spread Operator: //
 // 4.1 Clone the student object using the spread operator:
@@ -71,9 +74,18 @@ student.courses = [...student.courses, ...newCourses];
 console.log(`New courses: ${student.courses}`);
 
 // Part 5: Object Methods: //
-// 4.1 Add a method to the student object to dynamically add a new course to the courses array:
+// 5.1 Add a method to the student object to dynamically add a new course to the courses array:
 console.log("Adding a new course (GNED101)")
 student.addCourse("GNED101");
-//4.2: Add another method to calculate and return the total number of courses:
+// 5.2: Add another method to calculate and return the total number of courses:
 console.log("Getting the method to get total student courses");
 console.log(student.getTotalCourses());
+
+// BONUS //
+function getAvgScore(scores) {
+  return scores.reduce((sofar, current) => {
+    return current + sofar;
+  }, 0) / scores.length;
+}
+console.log("Getting average score");
+console.log(getAvgScore(scores));
